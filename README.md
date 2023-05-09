@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# React - Router, navegación en una SPA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📦 Sobre el repositorio
 
-## Available Scripts
+Segundo proyecto de la librería React, en el cual desarrollamos un app estilo orgnización en la cual podremos controlar los colaboradores de nuestra Organización.
 
-In the project directory, you can run:
+## ✔️ [El respositorio aquí](https://github.com/K3yJey/router.git)
 
-### `npm start`
+## 🔧 Tecnologías utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![React](https://img.shields.io/badge/React-100000?style=for-the-badge&logo=React&logoColor=00dafc&labelColor=222222&color=222222)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Comentarios adicionales
 
-### `npm test`
+Proyecto en progreso.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📂 División/Organización de la carpeta
 
-### `npm run build`
+- Carpeta
+- Carpeta
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Comandos necesarios para la creación de la app React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```console
+npx create-react-app [nombre de la app]
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+↑ Crear nuestra app de React
 
-### `npm run eject`
+```console
+cd [nombre de la app]
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+↑ Para ingresar a la carpeta a trabajar con la app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```console
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+↑ Iniciar con el servidor. [http://localhost:3000](http://localhost:3000) para ver la página en tu navegador
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```console
+npm i tar
+```
 
-## Learn More
+↑ Si tienes este error: "npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates."
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```console
+Ctrl + C
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+↑ Si deseas culminar el servidor react.
 
-### Code Splitting
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**IMPORTANTE: Mantener la terminal corriendo para la correcta ejecución de la app.**
 
-### Analyzing the Bundle Size
+## ⚙️ Comandos necesarios para el deploy de la app React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```console
+npm run build
+```
 
-### Making a Progressive Web App
+↑ Optimiza el código y crea la carpeta build para el deploy.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```console
+npm install -g serve
+```
 
-### Advanced Configuration
+↑ Installa el serve para crear un servidor estático.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```console
+serve -s build
+```
 
-### Deployment
+↑ Ejecuta el servidor.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## ▶️ Deploy de app
 
-### `npm run build` fails to minify
+- Vercel => [Org Page](https://org-k3yjey.vercel.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎨 Diseño en Figma
+
+- Figma => [Clic aquí](https://www.figma.com/file/70l45ssEH6qBo9IYDe2nxe/Intro-a-React?node-id=134%3A128&t=7I0a4d3jWOfv6dHU-1)
+
+## 💻 Contacto
+
+- Linkedin => [Clic aquí](https://www.linkedin.com/in/k3yjey-dev/)
