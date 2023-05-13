@@ -16,6 +16,7 @@
 
 .text__card {
   line-height: 1.2rem;
+  text-align: center;
 }
 
 .post__card {
@@ -34,10 +35,12 @@
   font-size: var(--font-size-card-post-title);
   font-weight: var(--font-card);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .post-card__meta {
   line-height: 1.3rem;
+  text-align: center;
 }
 
 .post-card--bienestar {
