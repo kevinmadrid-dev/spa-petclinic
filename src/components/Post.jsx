@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react"
-import "../assets/css/componentes/card.css"
 import { useParams, useNavigate } from "react-router-dom"
-import { buscar } from "../api/api"
+import "../assets/css/componentes/card.css"
+import { buscar } from "../api/api.js"
 
 const Post = ({ url }) => {
   const [post, setPost] = useState({})
+
   const { id } = useParams()
+
   const navigate = useNavigate()
 
   useEffect(() => {

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "../assets/css/componentes/card.css"
-import { buscar } from "../api/api"
+import { buscar } from "../api/api.js"
 
-export const ListPosts = ({ url }) => {
+const ListPosts = ({ url }) => {
   const [posts, setPosts] = useState([])
 
   //Este Hook maneja estados secundarios, hace la solicitud a la API a través de buscar y se ejecuta si URL cambia
@@ -15,7 +15,6 @@ export const ListPosts = ({ url }) => {
     <section className="posts container">
       {posts.map((post) => {
         const { id, title, metadescription, categoria } = post
-
         return (
           <Link
             to={`/posts/${id}`}

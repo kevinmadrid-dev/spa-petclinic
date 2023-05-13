@@ -3,6 +3,7 @@
   box-sizing: border-box;
   justify-content: space-evenly;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .category-list__category {

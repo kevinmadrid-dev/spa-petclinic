@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { buscar } from "../api/api"
 import "../assets/css/blog.css"
+import { buscar } from "../api/api.js"
 
 const ListCategories = () => {
   const [categories, setCategories] = useState([])
