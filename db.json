@@ -2,12 +2,12 @@
   "categorias": [
     {
       "id": "bienestar",
-      "nombre": "bienestar",
+      "nombre": "Bienestar",
       "subcategorias": ["higiene", "salud"]
     },
     {
       "id": "comportamiento",
-      "nombre": "comportamiento",
+      "nombre": "Comportamiento",
       "subcategorias": ["entrenamiento", "educacion"]
     }
   ],
