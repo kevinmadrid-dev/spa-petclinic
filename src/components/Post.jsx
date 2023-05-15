@@ -5,9 +5,7 @@ import { buscar } from "../api/api.js"
 
 const Post = ({ url }) => {
   const [post, setPost] = useState({})
-
   const { id } = useParams()
-
   const navigate = useNavigate()
 
   useEffect(() => {
