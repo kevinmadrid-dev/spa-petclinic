@@ -42,7 +42,19 @@ Ctrl + C
 
 <br/>
 
-**IMPORTANTE: Mantener la terminal corriendo para la correcta ejecución de la app.**
+```console
+npm -g json-server
+```
+↑ Instalar el servidor db.json.
+
+```console
+json-server --watch .\db.json --port=5000
+```
+↑ Iniciar el servidor db.json en el puerto 5000.
+
+<br/>
+
+**IMPORTANTE: Mantener las dos terminales corriendo para la correcta ejecución de la app.**
 ## ⚙️ Comandos necesarios para el deploy de la app React
 
 ```console
@@ -61,10 +73,7 @@ serve -s build
 ↑ Ejecuta el servidor.
 
 ## ▶️ Deploy de app
-* Vercel => [Org Page](https://org-k3yjey.vercel.app/)
-
-## 🎨 Diseño en Figma
-* Figma => [Clic aquí](https://www.figma.com/file/70l45ssEH6qBo9IYDe2nxe/Intro-a-React?node-id=134%3A128&t=7I0a4d3jWOfv6dHU-1)
+* Vercel => [Org Page](https://router-k3yjey.vercel.app/)
 
 ## 💻 Contacto
 * Linkedin => [Clic aquí](https://www.linkedin.com/in/k3yjey-dev/)
