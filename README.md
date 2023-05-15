@@ -73,7 +73,7 @@ serve -s build
 ↑ Ejecuta el servidor.
 
 ## ▶️ Deploy de app
-* Vercel => [Org Page](https://router-k3yjey.vercel.app/)
+* Vercel => [Router Page](https://router-k3yjey.vercel.app/)
 
 ## 💻 Contacto
 * Linkedin => [Clic aquí](https://www.linkedin.com/in/k3yjey-dev/)
