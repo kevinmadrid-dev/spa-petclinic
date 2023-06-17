@@ -1,7 +1,7 @@
 # React - Router, navegación en una SPA
 
 ## 📦 Sobre el repositorio
-Segundo proyecto de la librería React, en el cual desarrollaremos un web app con el principio de Single Page Application.
+Segundo proyecto React, en el cual desarrollaremos un web app para una veterinaria con el principio de Single Page Application - SPA.
 
 ## ✔️ [El respositorio aquí](https://github.com/K3yJey/router.git)
 
