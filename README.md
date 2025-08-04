@@ -4,6 +4,12 @@ Aplicación web de página única (SPA) construida con **React** para la gestió
 
 ---
 
+## 📸 Preview del proyecto
+
+![Preview de Doguito PetShop](./src/img.png)
+
+---
+
 ## 🧩 Características Principales
 
 - ✅ **Single Page Application** con React 18
@@ -65,9 +71,13 @@ npx json-server --watch db.json --port 5000
 npm i tar
 ```
 
+---
+
 ### Deploy Backend
 
 - Backend SPA PetClinic: [backend-spa-petclinic](https://backend-spa-petclinic.onrender.com)
+
+---
 
 ### Contacto
 
