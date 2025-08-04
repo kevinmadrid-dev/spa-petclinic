@@ -1,0 +1,462 @@
+/* Loading Spinner */
+.spinner {
+  display: inline-block;
+  position: relative;
+}
+
+.spinner__circle {
+  display: inline-block;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #007bff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.spinner--small .spinner__circle {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.spinner--medium .spinner__circle {
+  width: 40px;
+  height: 40px;
+  border-width: 3px;
+}
+
+.spinner--large .spinner__circle {
+  width: 60px;
+  height: 60px;
+  border-width: 4px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error Message */
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-message__content {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 400px;
+}
+
+.error-message__title {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.error-message__text {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.error-message__retry-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.error-message__retry-btn:hover {
+  background: #0056b3;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6c757d;
+}
+
+.empty-state h3 {
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+/* 404 Page Styles */
+.dog-image {
+  width: 100%;
+  max-width: 25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.notfound-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #6c757d;
+}
+
+.notfound-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.notfound-link:hover {
+  text-decoration: underline;
+}
+
+/* Category Tags */
+.category-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  text-transform: capitalize;
+}
+
+.category-tag--bienestar {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.category-tag--comportamiento {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.category-tag--productos {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+/* Subcategory Navigation Styles */
+.subcategory-nav {
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.subcategory-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #495057;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.category-description {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.subcategory-nav .category-list {
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.subcategory-nav .category-list__category {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #495057;
+}
+
+.subcategory-nav .category-list__category:hover,
+.subcategory-nav .category-list__category.active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subcategory-nav .category-list__category--bienestar {
+  border-color: #28a745;
+}
+
+.subcategory-nav .category-list__category--bienestar:hover,
+.subcategory-nav .category-list__category--bienestar.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.subcategory-nav .category-list__category--comportamiento {
+  border-color: #17a2b8;
+}
+
+.subcategory-nav .category-list__category--comportamiento:hover,
+.subcategory-nav .category-list__category--comportamiento.active {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.subcategory-nav .category-list__category--productos {
+  border-color: #ffc107;
+}
+
+.subcategory-nav .category-list__category--productos:hover,
+.subcategory-nav .category-list__category--productos.active {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Main Category Navigation */
+.category-list-container .category-list__category {
+  transition: all 0.2s ease;
+}
+
+.category-list-container .category-list__category:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Post Card Improvements */
+.post-card__content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card__category {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+/* Home Page Styles */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.hero-section .title-page {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.latest-posts {
+  padding: 2rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #495057;
+}
+
+/* Post Detail Improvements */
+.post__header {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.post__header h1 {
+  margin: 0;
+  flex: 1;
+}
+
+.post__content {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.post__footer {
+  border-top: 1px solid #e9ecef;
+  padding-top: 1rem;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn--secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn--secondary:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .hero-section .title-page {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .post__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .category-tag {
+    align-self: flex-start;
+  }
+
+  /* Category lists responsive - Mejorado */
+  .category-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+  }
+
+  .category-list__category {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    display: block;
+  }
+
+  /* Subcategorías responsive - Mejorado */
+  .subcategory-nav {
+    padding: 1rem 0;
+  }
+
+  .subcategory-nav .category-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .subcategory-nav .category-list__category {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    margin: 0;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .subcategory-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Posts grid responsive */
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Spinner responsive */
+  .spinner--large .spinner__circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Button responsive */
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Post content responsive */
+  .post {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .post__content {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Títulos responsive */
+  .title-page {
+    font-size: 1.5rem;
+    height: auto;
+    min-height: 3rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .hero-section .title-page {
+    font-size: 1.6rem;
+  }
+
+  .category-list__category {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.75rem;
+    max-width: 250px;
+  }
+
+  .subcategory-nav .category-list__category {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    max-width: 200px;
+  }
+
+  .post-card__title {
+    font-size: 1.1rem;
+  }
+
+  .error-message__content {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+}

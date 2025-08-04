@@ -1,4 +1,4 @@
-import "../assets/css/404.css"
+import React from "react"
 import image from "../assets/img/doguito404.svg"
 
 const Page404 = () => {

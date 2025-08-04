@@ -1,42 +1,80 @@
-import { useState, useEffect } from "react"
 import { useParams, Routes, Route, Link, useResolvedPath } from "react-router-dom"
-import "../assets/css/blog.css"
-import { buscar } from "../api/api.js"
-import ListCategories from "../components/ListCategories.jsx"
-import ListPosts from "../components/ListPosts.jsx"
+import { useCategory } from "../hooks/useApi.js"
+import LoadingSpinner from "./ui/LoadingSpinner.jsx"
+import ErrorMessage from "./ui/ErrorMessage.jsx"
+import ListCategories from "./ListCategories.jsx"
+import ListPosts from "./ListPosts.jsx"
 import SubCategoria from "./SubCategoria.jsx"
 
 const Categoria = () => {
-  const [subcategorias, setSubcategorias] = useState([])
   const { id } = useParams()
-
   const url = useResolvedPath("").pathname
+  const { data: categoryData, loading, error, refetch } = useCategory(id)
 
-  useEffect(() => {
-    buscar(`/categorias?id=${id}`, (response) => {
-      setSubcategorias(response[0].subcategorias)
-    })
-  }, [id])
+  const subcategorias = categoryData?.[0]?.subcategorias || []
+  const categoryName = categoryData?.[0]?.nombre || ""
+
+  if (loading) {
+    return (
+      <div className="container">
+        <LoadingSpinner size="large" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="container">
+        <ErrorMessage message="Error al cargar la categoría" onRetry={refetch} />
+      </div>
+    )
+  }
 
   return (
     <>
       <div className="container">
-        <h2 className="title-page">Pet Noticias</h2>
+        <h2 className="title-page">
+          Pet Noticias {categoryName && `- ${categoryName}`}
+        </h2>
+        {categoryName && (
+          <p className="category-description">
+            Explora artículos sobre {categoryName.toLowerCase()} para tu mascota
+          </p>
+        )}
       </div>
+
       <ListCategories />
 
-      <ul className="category-list container flex">
-        {subcategorias.map((subcategoria) => (
-          <li
-            className={`category-list__category category-list__category--${id}`}
-            key={subcategoria}>
-            <Link to={`${url}/${subcategoria}`}>{subcategoria}</Link>
-          </li>
-        ))}
-      </ul>
+      {subcategorias.length > 0 && (
+        <nav className="subcategory-nav">
+          <div className="container">
+            <h3 className="subcategory-title">Explora por tema</h3>
+            <ul className="category-list flex">
+              <li>
+                <Link
+                  to={`/categoria/${id}`}
+                  className={`category-list__category category-list__category--${id} ${
+                    url.endsWith(`/categoria/${id}`) ? "active" : ""
+                  }`}>
+                  Todos
+                </Link>
+              </li>
+              {subcategorias.map((subcategoria) => (
+                <li key={subcategoria}>
+                  <Link
+                    to={`${url}/${subcategoria.toLowerCase()}`}
+                    className={`category-list__category category-list__category--${id}`}>
+                    {subcategoria}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      )}
 
       <Routes>
-        <Route path="/" element={<ListPosts url={`/posts?categoria=${id}`} />} />
+        <Route path="/" element={<ListPosts filters={{ categoria: id }} />} />
         <Route path="/:subcategoria" element={<SubCategoria />} />
       </Routes>
     </>

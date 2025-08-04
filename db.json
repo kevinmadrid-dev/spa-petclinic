@@ -9,6 +9,11 @@
       "id": "comportamiento",
       "nombre": "Comportamiento",
       "subcategorias": ["Entrenamiento", "Educación"]
+    },
+    {
+      "id": "productos",
+      "nombre": "Productos",
+      "subcategorias": ["Alimentación", "Juguetes", "Accesorios"]
     }
   ],
 
@@ -68,6 +73,30 @@
       "body": "Puedes utilizar herramientas de entrenamiento para una amplia variedad de animales, un 'clicker' solo costará unos pocos dólares y te ayudará a dar un refuerzo positivo cuando aprendas a entrenar a un gato. (También puedes usar un bolígrafo normal con un botón de click; lo importante es tener un ruido distintivo). La mayoría de los entrenamientos para gatos implican darle a tu gato una golosina que le guste después de un click para marcar el comportamiento deseado.",
       "categoria": "comportamiento",
       "subcategoria": "entrenamiento"
+    },
+    {
+      "id": 8,
+      "title": "Los mejores alimentos para cachorros",
+      "metadescription": "Descubre qué alimentos son ideales para el crecimiento de tu cachorro.",
+      "body": "Una buena alimentación es fundamental durante los primeros meses de vida de tu cachorro. Los alimentos específicamente diseñados para cachorros contienen los nutrientes necesarios para su desarrollo óptimo, incluyendo proteínas de alta calidad, calcio para huesos fuertes y ácidos grasos esenciales para el desarrollo cerebral.",
+      "categoria": "productos",
+      "subcategoria": "alimentacion"
+    },
+    {
+      "id": 9,
+      "title": "Juguetes interactivos para perros",
+      "metadescription": "Mantén a tu perro entretenido y estimulado mentalmente.",
+      "body": "Los juguetes interactivos no solo mantienen a tu perro entretenido, sino que también proporcionan estimulación mental crucial. Los rompecabezas para perros, las pelotas dispensadoras de comida y los juguetes de cuerda pueden ayudar a reducir el aburrimiento y comportamientos destructivos.",
+      "categoria": "productos",
+      "subcategoria": "juguetes"
+    },
+    {
+      "id": 10,
+      "title": "Accesorios esenciales para gatos",
+      "metadescription": "Todo lo que necesitas para que tu gato se sienta cómodo en casa.",
+      "body": "Los accesorios básicos para gatos incluyen un rascador resistente, una cama cómoda, comederos y bebederos apropiados, y una caja de arena de calidad. Estos elementos no solo proporcionan comodidad sino que también satisfacen las necesidades naturales de tu felino.",
+      "categoria": "productos",
+      "subcategoria": "accesorios"
     }
   ]
 }

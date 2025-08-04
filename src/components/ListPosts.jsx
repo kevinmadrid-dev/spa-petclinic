@@ -1,32 +1,47 @@
-import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import "../assets/css/componentes/card.css"
-import { buscar } from "../api/api.js"
+import React from "react"
+import { usePosts } from "../hooks/useApi.js"
+import PostCard from "./ui/PostCard.jsx"
+import LoadingSpinner from "./ui/LoadingSpinner.jsx"
+import ErrorMessage from "./ui/ErrorMessage.jsx"
 
-const ListPosts = ({ url }) => {
-  const [posts, setPosts] = useState([])
+const ListPosts = ({ filters = {}, className = "" }) => {
+  const { data: posts, loading, error, refetch } = usePosts(filters)
 
-  //Este Hook maneja estados secundarios, hace la solicitud a la API a través de buscar y se ejecuta si URL cambia
-  useEffect(() => {
-    buscar(url, setPosts)
-  }, [url])
+  if (loading) {
+    return (
+      <section className={`posts container ${className}`}>
+        <LoadingSpinner size="large" />
+      </section>
+    )
+  }
+
+  if (error) {
+    return (
+      <section className={`posts container ${className}`}>
+        <ErrorMessage
+          message={`Error al cargar los posts: ${error}`}
+          onRetry={refetch}
+        />
+      </section>
+    )
+  }
+
+  if (!posts || posts.length === 0) {
+    return (
+      <section className={`posts container ${className}`}>
+        <div className="empty-state">
+          <h3>No hay posts disponibles</h3>
+          <p>Intenta con otros filtros o vuelve más tarde.</p>
+        </div>
+      </section>
+    )
+  }
 
   return (
-    <section className="posts container">
-      {posts.map((post) => {
-        const { id, title, metadescription, categoria } = post
-        return (
-          <Link
-            to={`/posts/${id}`}
-            className={`post__card post-card--${categoria}`}
-            key={id}>
-            <article>
-              <h3 className="post-card__title">{title}</h3>
-              <p className="post-card__meta">{metadescription}</p>
-            </article>
-          </Link>
-        )
-      })}
+    <section className={`posts container ${className}`}>
+      {posts.map((post) => (
+        <PostCard key={post.id} post={post} />
+      ))}
     </section>
   )
 }

@@ -103,6 +103,61 @@
   left: 0;
 }
 
+/* Responsive mobile-first design */
+@media (max-width: 899px) {
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 0 1rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .header-container {
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .menu-hamburguer {
+    display: none;
+  }
+
+  /* Para pantallas móviles, hacer el menú siempre visible (simplificado) */
+  .menu-header {
+    position: static;
+    width: 100%;
+    height: auto;
+    background: none;
+    left: 0;
+    top: auto;
+    grid-row: 2;
+    margin: 0;
+    padding: 0.5rem 0 1rem 0;
+  }
+
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .menu-item {
+    background: var(--primary-color);
+    color: var(--contrast-light-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .menu-header__fechar,
+  .menu-header-background {
+    display: none;
+  }
+}
+
 @media (min-width: 900px) {
   .header {
     grid-template-areas: "menu logo .";

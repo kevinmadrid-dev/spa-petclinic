@@ -4,13 +4,28 @@
   justify-content: space-evenly;
   margin-bottom: 2rem;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .category-list__category {
   font-weight: var(--font-size-categories);
-  background-color: var(--contrast-light-color);
+  background-color: var(--cor-categoria-productos);
+  color: #fff;
   border-radius: 3rem;
   padding: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 120px;
+  flex: 1;
+  max-width: 200px;
+}
+
+.category-list__category:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .category-list__category--bienestar {

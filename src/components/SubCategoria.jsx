@@ -1,9 +1,20 @@
+import React from "react"
 import { useParams } from "react-router-dom"
-import ListPosts from "../components/ListPosts.jsx"
+import ListPosts from "./ListPosts.jsx"
 
 const SubCategoria = () => {
-  const { subcategoria } = useParams()
-  return <ListPosts url={`/posts?subcategoria=${subcategoria}`} />
+  const { subcategoria, id: categoria } = useParams()
+
+  return (
+    <div className="subcategoria-page">
+      <ListPosts
+        filters={{
+          subcategoria: subcategoria.toLowerCase(),
+          categoria
+        }}
+      />
+    </div>
+  )
 }
 
 export default SubCategoria
