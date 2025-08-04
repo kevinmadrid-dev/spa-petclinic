@@ -1,9 +1,6 @@
 import { useState, useEffect, useCallback } from "react"
 import { api } from "../api/api.js"
 
-/**
- * Hook personalizado para manejar peticiones a la API
- */
 export const useApi = (url, options = {}) => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -27,11 +24,13 @@ export const useApi = (url, options = {}) => {
     }
   }, [url])
 
+  const depsKey = JSON.stringify(dependencies)
+
   useEffect(() => {
     if (immediate) {
       fetchData()
     }
-  }, [fetchData, immediate, ...dependencies])
+  }, [fetchData, immediate, depsKey])
 
   return {
     data,
@@ -41,7 +40,7 @@ export const useApi = (url, options = {}) => {
   }
 }
 
-// Hooks específicos para entidades
+// Posts
 export const usePosts = (filters = {}) => {
   let url = "/posts"
 
@@ -56,14 +55,17 @@ export const usePosts = (filters = {}) => {
   return useApi(url, { dependencies: [filters.categoria, filters.subcategoria] })
 }
 
+// Post id
 export const usePost = (id) => {
   return useApi(id ? `/posts/${id}` : null)
 }
 
+// Categorías
 export const useCategories = () => {
   return useApi("/categorias")
 }
 
+// Categoría id
 export const useCategory = (id) => {
   return useApi(id ? `/categorias?id=${id}` : null)
 }

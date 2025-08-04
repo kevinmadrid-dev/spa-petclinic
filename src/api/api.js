@@ -2,7 +2,7 @@ import axios from "axios"
 
 // Configuración base de la API
 export const api = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://backend-spa-petclinic.onrender.com",
   timeout: 5000,
   headers: {
     "Content-Type": "application/json"
