@@ -1,4 +1,3 @@
-import React from "react"
 import { Link } from "react-router-dom"
 import { useCategories } from "../hooks/useApi.js"
 import LoadingSpinner from "./ui/LoadingSpinner.jsx"

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { usePost } from "../hooks/useApi.js"
 import LoadingSpinner from "./ui/LoadingSpinner.jsx"

@@ -1,5 +1,6 @@
 import { useParams, Routes, Route, Link, useResolvedPath } from "react-router-dom"
 import { useCategory } from "../hooks/useApi.js"
+
 import LoadingSpinner from "./ui/LoadingSpinner.jsx"
 import ErrorMessage from "./ui/ErrorMessage.jsx"
 import ListCategories from "./ListCategories.jsx"
@@ -36,6 +37,7 @@ const Categoria = () => {
         <h2 className="title-page">
           Pet Noticias {categoryName && `- ${categoryName}`}
         </h2>
+
         {categoryName && (
           <p className="category-description">
             Explora artículos sobre {categoryName.toLowerCase()} para tu mascota
@@ -49,6 +51,7 @@ const Categoria = () => {
         <nav className="subcategory-nav">
           <div className="container">
             <h3 className="subcategory-title">Explora por tema</h3>
+
             <ul className="category-list flex">
               <li>
                 <Link
@@ -59,6 +62,7 @@ const Categoria = () => {
                   Todos
                 </Link>
               </li>
+
               {subcategorias.map((subcategoria) => (
                 <li key={subcategoria}>
                   <Link

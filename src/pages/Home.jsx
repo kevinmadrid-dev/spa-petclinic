@@ -1,4 +1,3 @@
-import React from "react"
 import ListPosts from "../components/ListPosts.jsx"
 import ListCategories from "../components/ListCategories.jsx"
 

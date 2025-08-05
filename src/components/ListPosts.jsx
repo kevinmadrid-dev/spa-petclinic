@@ -1,4 +1,3 @@
-import React from "react"
 import { usePosts } from "../hooks/useApi.js"
 import PostCard from "./ui/PostCard.jsx"
 import LoadingSpinner from "./ui/LoadingSpinner.jsx"
