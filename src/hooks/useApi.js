@@ -17,7 +17,9 @@ export const useApi = (url, options = {}) => {
       const response = await api.get(url)
       setData(response.data)
     } catch (err) {
-      setError(err.message || "Error al cargar los datos")
+      const mensaje =
+        err.custom?.message || err.message || "Error al cargar los datos"
+      setError(mensaje)
       console.error("Error en useApi:", err)
     } finally {
       setLoading(false)
